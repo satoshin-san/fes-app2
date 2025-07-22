@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>フェス記録アプリ</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- ここから追加 -->
+    <link rel="manifest" href="manifest.json">
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js');
+      }
+    </script>
+    <!-- ここまで追加 -->
+</head>
+<body>
+    <h1>会えた人リスト</h1>
+    <div id="icon-container"></div>
+    <script src="script.js"></script>
+    <div id="bingo-overlay">
+      <img src="icons/bingo.png" id="bingo-img" alt="ビンゴ！">
+    </div>
+</body>
+</html>

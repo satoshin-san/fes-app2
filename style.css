@@ -1,0 +1,54 @@
+body {
+    font-family: 'Segoe UI', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+    background: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 32px;
+}
+
+#icon-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin: 40px auto;
+    max-width: 600px;
+}
+.icon-wrapper {
+    position: relative;
+    display: inline-block;
+}
+.stamp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    pointer-events: none;
+    display: none;
+}
+
+#bingo-overlay {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+}
+#bingo-overlay.show {
+    display: flex;
+}
+#bingo-img {
+    max-width: 80vw;
+    max-height: 80vh;
+    border-radius: 24px;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.5);
+}
